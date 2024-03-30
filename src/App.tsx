@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Navigation from "./assets/components/Navigation/Navigation.tsx";
+import Home from "./assets/components/Home/Home.tsx";
 
 function App() {
 
   return (
     <Container>
       <Navigation />
+        <Home />
     </Container>
   )
 }
@@ -17,8 +19,7 @@ const Container = styled.div `
     width: 100vw;
     height: 100vh;
     background: #222;
-    font-family: Poppins, sans-serif;
-    color: #fff;
+    
 `
 
 export default App
