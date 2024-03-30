@@ -51,6 +51,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
     padding: 40px;
+    height: 15vh;
 
     @media (max-width: 645px) {
         padding: 20px;
