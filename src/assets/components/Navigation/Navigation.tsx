@@ -1,6 +1,7 @@
 import {useState} from "react";
 import styled from "styled-components";
 import menuImg from '../../img/nav/menu.svg';
+import NavigationMobile from "./NavigationMobile.tsx";
 
 export interface MenuItem {
     name: string,
@@ -34,6 +35,12 @@ export default function Navigation() {
                 <MenuItemSelected key={i.id}>{i.name}</MenuItemSelected>)}
         </MenuCnt>
         <MenuIcon src={menuImg} alt='open menu' onClick={handleToggleMenu} />
+        <NavigationMobile
+            activeBlockId={activeBlockId}
+            isMenuOpen={isMenuOpen}
+            menuItems={menuList}
+            handleMenuSelect={handleMenuSelect}
+            handleCloseMenu={handleToggleMenu} />
     </Nav>
 }
 

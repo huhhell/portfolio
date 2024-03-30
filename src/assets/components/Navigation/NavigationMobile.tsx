@@ -10,6 +10,8 @@ interface Props {
     handleCloseMenu: () => void
 }
 
+
+// todo mb add here some socials
 export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :
@@ -31,6 +33,7 @@ const NavCntOpen = styled.div `
     width: 100vw;
     height: 100vh;
     background: #222;
+    padding: 30px;
     
     @media (max-width: 645px) {
         display: block;
@@ -44,23 +47,27 @@ const NavCntClose = styled.div `
 const List = styled.ul `
     display: flex;
     flex-direction: column;
+    gap: 20px;
 `
 
 const ListItem = styled.li `
-    padding: 10px;
-    border-bottom: 1px solid #efeeee;
-    font-size: 18px;
+    padding: 10px 0;
+    font-size: 24px;
     color: rgba(255, 255, 255, 0.50);
+    text-align: center;
 `
 
 const ListItemSelected = styled.li `
-    padding: 10px;
-    border-bottom: 1px solid #efeeee;
-    font-size: 18px;
+    padding: 10px 0;
+    font-size: 24px;
     color: #fff;
+    text-align: center;
 `
 
 const CloseImg = styled.img `
+    position: absolute;
+    top: 20px;
+    right: 20px;
     width: 30px;
     height: 30px;
 `
