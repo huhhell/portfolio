@@ -56,6 +56,7 @@ const Nav = styled.nav`
 
     @media (max-width: 645px) {
         padding: 20px;
+        height: 10vh;
     }
 `
 

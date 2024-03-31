@@ -32,17 +32,42 @@ const HomeCnt = styled.section`
     justify-content: center;
     gap: 40px;
     width: 100%;
-    //height: 85vh;
     height: 100%;
     scroll-snap-align: start;
+    padding: 10vh 40px 40px 40px;
+    
+    @media (max-width: 900px) {
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+        padding: 15vh 40px 40px 40px;
+    }
+    @media (max-width: 645px) {
+        padding: 15vh 20px 20px 20px;
+    }
 `
 
 const AvatarCnt = styled.div`
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     max-width: 400px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 10px solid #444;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.80);
+    
+    @media (max-width: 900px) {
+        flex: 0 0 auto;
+        width: 40%;
+        max-width: 200px;
+        aspect-ratio: 1/1;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.80);
+    }
+    
+    @media (max-width: 600px) {
+        max-width: 200px;
+        border: 5px solid #444;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.80);
+    }
 `
 
 const AvatarImg = styled.img`
@@ -56,12 +81,30 @@ const Subtitle = styled.p`
     color: rgba(255, 255, 255, 0.50);
     font-size: 20px;
     margin-bottom: 15px;
+    
+    @media (max-width: 900px) {
+        text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 `
 
 const Title = styled.h2`
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
+
+    @media (max-width: 900px) {
+        text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 `
 
 const Text = styled.p`
@@ -70,6 +113,14 @@ const Text = styled.p`
     line-height: 130%;
     margin-bottom: 30px;
 
+    @media (max-width: 900px) {
+        text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
 `
 
 const LinksGroup = styled.div`
@@ -77,18 +128,27 @@ const LinksGroup = styled.div`
     align-items: center;
     justify-content: start;
     gap: 10px;
+
+    @media (max-width: 900px) {
+        justify-content: center;
+    }
 `
 
-const PortfolioLink = styled.a`
+const LinkItem = styled.a`
     padding: 15px 30px;
     background: #333;
+    border-radius: 30px;
+
+    @media (max-width:645px) {
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+`
+
+const PortfolioLink = styled(LinkItem)`
     border: 3px solid #007CED;
-    border-radius: 30px;
 `
 
-const ContactLink = styled.a`
-    padding: 15px 30px;
-    background: #333;
+const ContactLink = styled(LinkItem)`
     border: 3px solid #D5D5D5;
-    border-radius: 30px;
 `
