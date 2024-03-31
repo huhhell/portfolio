@@ -31,8 +31,10 @@ const HomeCnt = styled.section`
     align-items: center;
     justify-content: center;
     gap: 40px;
-    width: 100vw;
-    height: 85vh;
+    width: 100%;
+    //height: 85vh;
+    height: 100%;
+    scroll-snap-align: start;
 `
 
 const AvatarCnt = styled.div`

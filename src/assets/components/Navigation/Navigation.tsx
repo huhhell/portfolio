@@ -52,6 +52,7 @@ const Nav = styled.nav`
     justify-content: space-between;
     padding: 40px;
     height: 15vh;
+    background: #222;
 
     @media (max-width: 645px) {
         padding: 20px;
