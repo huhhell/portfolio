@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Navigation from "./assets/components/Navigation/Navigation.tsx";
-// import Home from "./assets/Pages/Home/Home.tsx";
-// import Skills from "./assets/components/Skills/Skills.tsx";
-// import Languages from "./assets/components/Skills/Languages .tsx";
 import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/Routes/Routes.tsx";
+
+// <Link to='products' className='header__shop'>Shop</Link>
 
 function App() {
 

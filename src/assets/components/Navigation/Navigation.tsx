@@ -2,9 +2,11 @@ import {useState} from "react";
 import styled from "styled-components";
 import menuImg from '../../img/nav/menu.svg';
 import NavigationMobile from "./NavigationMobile.tsx";
+import {Link} from "react-router-dom";
 
 export interface MenuItem {
     name: string,
+    path: string,
     id: number
 }
 
@@ -12,10 +14,10 @@ export default function Navigation() {
     const [activeBlockId, setActiveBlockId] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuList = [
-        {name: 'Home', id: 0},
-        {name: 'Skills', id: 1},
-        {name: 'Portfolio', id: 2},
-        {name: 'Contact', id: 3},
+        {name: 'Home', path: 'home', id: 0},
+        {name: 'Skills', path: 'skills', id: 1},
+        {name: 'Portfolio', path: '', id: 2},
+        {name: 'Contact', path: '', id: 3},
     ]
 
     // todo rename this
@@ -31,8 +33,12 @@ export default function Navigation() {
         <Logo>Виктория</Logo>
         <MenuCnt>
             {menuList.map(i => i.id !== activeBlockId ?
-                <MenuItem onClick={() => handleMenuSelect(i.id)} key={i.id}>{i.name}</MenuItem> :
-                <MenuItemSelected key={i.id}>{i.name}</MenuItemSelected>)}
+                <MenuItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
+                    <LinkItem to={i.path}>{i.name}</LinkItem>
+                </MenuItem> :
+                <MenuItemSelected key={i.id}>
+                    <LinkItem to={i.path}>{i.name}</LinkItem>
+                </MenuItemSelected>)}
         </MenuCnt>
         <MenuIcon src={menuImg} alt='open menu' onClick={handleToggleMenu} />
         <NavigationMobile
@@ -103,5 +109,10 @@ const MenuIcon = styled.img`
     @media (max-width: 645px) {
         display: block;
     }
+`
+
+const LinkItem = styled(Link)`
+    color: inherit;
+    font-size: inherit;
 `
 

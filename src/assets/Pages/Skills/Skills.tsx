@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Capabilities from "./Capabilities.tsx";
-import Languages from "./Languages .tsx";
+import Capabilities from "../../components/Skills/Capabilities.tsx";
+import Languages from "../../components/Skills/Languages .tsx";
 
 
 // todo add a text here
