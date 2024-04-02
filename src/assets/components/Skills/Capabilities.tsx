@@ -79,6 +79,11 @@ const CapabilitiesItem = styled.div`
 const CapabilitiesIcon = styled.img`
     width: 40px;
     height: 40px;
+    
+    @media(max-width: 645px) {
+        width: 30px;
+        height: 30px;
+    }
 `
 
 const CapabilitiesInfo = styled.div``

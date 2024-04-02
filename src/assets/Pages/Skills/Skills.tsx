@@ -19,11 +19,14 @@ const SkillsCnt = styled.section`
     gap: 5vw;
     padding: 40px;
 
-    @media (max-width: 1000px) {
-        //flex-direction: column;
-        //gap: 50px;
-        //justify-content: start;
-        gap: 30px;
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 50px;
+        justify-content: start;
+    }
+    
+    @media(max-width: 645px) {
+        padding: 20px;
     }
 
     @media (max-width: 645px) {

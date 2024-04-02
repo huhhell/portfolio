@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import LanguagesMobile from "./LanguagesMobile.tsx";
 
+export interface Language {
+    name: string,
+    progress: string,
+    id: number
+}
 
 export default function Languages() {
-    const languages = [
+    const languages: Language[] = [
         {name: 'React', progress: '60%', id: 0},
         {name: 'TypeScript', progress: '40%', id: 1},
         {name: 'JavaScript', progress: '80%', id: 2},
@@ -11,7 +17,8 @@ export default function Languages() {
         {name: 'Testing', progress: '50%', id: 5},
     ]
 
-    return <SkillsBlock>
+    return <>
+        <SkillsBlock>
         <SectionTitle>Технологии</SectionTitle>
         <SkillsList>
             {languages.map(i => <SkillsItem key={i.id}>
@@ -20,18 +27,20 @@ export default function Languages() {
                     <SkillsItemProgress $progress={i.progress}></SkillsItemProgress>
                 </SkillsItemProgressCnt>
             </SkillsItem>)}
-            <SkillsItem>
-                <SkillsItemName></SkillsItemName>
-            </SkillsItem>
+            {/*<SkillsItem>*/}
+            {/*    <SkillsItemName></SkillsItemName>*/}
+            {/*</SkillsItem>*/}
         </SkillsList>
     </SkillsBlock>
+        <LanguagesMobile languages={languages} />
+        </>
 }
 
 const SkillsBlock = styled.div`
     flex: 0 1 40%;
     
-    @media (max-width: 1000px) {
-        
+    @media (max-width: 900px) {
+        display: none;
     }
 `
 
