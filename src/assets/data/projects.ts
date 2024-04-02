@@ -4,6 +4,19 @@ import projectImg03 from "../img/projects/03.jpg";
 import projectImg04 from "../img/projects/04.jpg";
 import projectImg05 from "../img/projects/05.jpg";
 import projectImg06 from "../img/projects/06.jpg";
+import {
+    CSS,
+    HTML,
+    javaScript,
+    jest,
+    materialUI,
+    reactRouter,
+    reactT,
+    reactTestingLibrary,
+    SCSS, styledComponents,
+    Tech,
+    typeScript
+} from "./tech.ts";
 
 interface ProjectLinks {
     name: string,
@@ -11,9 +24,10 @@ interface ProjectLinks {
     id: number,
 }
 
+
 export default interface Project {
     name: string,
-    tech: string,
+    tech: Tech[],
     description: string,
     img: string,
     links: ProjectLinks[],
@@ -24,7 +38,7 @@ export default interface Project {
 export const projects: Project[] = [
     {
         name: 'Studio Retro website',
-        tech: 'React, TypeScript',
+        tech: [reactT, typeScript],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg01,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
@@ -33,7 +47,7 @@ export const projects: Project[] = [
     },
     {
         name: 'E-Commerce',
-        tech: 'HTML, SCSS, Tailwind ',
+        tech: [HTML, SCSS, materialUI],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg02,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
@@ -42,7 +56,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Portfolio',
-        tech: 'React, RTL, React Router',
+        tech: [reactT, reactRouter, reactTestingLibrary, jest],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg03,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
@@ -51,7 +65,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Travel Website',
-        tech: 'React, TypeScript, MUI',
+        tech: [reactT, javaScript, styledComponents],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg04,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
@@ -60,7 +74,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Web Studio',
-        tech: 'HTML, SCSS, JavaScript',
+        tech: [HTML, CSS, typeScript],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg05,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
@@ -69,7 +83,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Movie Website',
-        tech: 'HTML, SCSS, TypeScript',
+        tech: [HTML, CSS, typeScript],
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
         img: projectImg06,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],

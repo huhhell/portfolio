@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Project from "../../data/Projects.ts";
+import Project from "../../data/projects.ts";
 
 
 interface Props {
