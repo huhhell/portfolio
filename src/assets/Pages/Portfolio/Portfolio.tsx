@@ -2,7 +2,7 @@ import {useState} from "react";
 import ProjectsCategories from "../../components/ProjectsCategories/ProjectsCategories.tsx";
 import styled from "styled-components";
 import Projects from "../../components/Projects/Projects.tsx";
-import Project, {projects} from "../../data/Projects.ts";
+import Project, {projects} from "../../data/projects.ts";
 
 export default function Portfolio() {
     const [activeCategory, setActiveCategory] = useState(0)
