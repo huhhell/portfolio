@@ -12,6 +12,7 @@ interface Props {
 
 
 // todo mb add here some socials
+// todo add routing
 export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :

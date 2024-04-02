@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-// todo do a progress
 export default function Languages() {
     const languages = [
         {name: 'React', progress: '60%', id: 0},
@@ -29,8 +28,10 @@ export default function Languages() {
 }
 
 const SkillsBlock = styled.div`
+    flex: 0 1 40%;
+    
     @media (max-width: 1000px) {
-        padding: 0 40px 40px 40px;
+        
     }
 `
 

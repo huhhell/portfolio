@@ -7,6 +7,7 @@ export default () => {
     return <Routes>
         <Route path='/home' element={<Home />}/>
         <Route path='/skills' element={<Skills />} />
-        {/*<Route path='/subscription' element={} />*/}
+        {/*<Route path='/portfolio' element={} />*/}
+        {/*<Route path='/contact' element={} />*/}
     </Routes>
 }

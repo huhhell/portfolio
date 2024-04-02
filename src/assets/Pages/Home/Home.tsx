@@ -32,18 +32,16 @@ const HomeCnt = styled.section`
     justify-content: center;
     gap: 40px;
     width: 100%;
-    height: 100%;
     scroll-snap-align: start;
-    padding: 10vh 40px 40px 40px;
+    padding: 40px;
     
     @media (max-width: 900px) {
         flex-direction: column;
         justify-content: start;
         gap: 20px;
-        padding: 15vh 40px 40px 40px;
     }
     @media (max-width: 645px) {
-        padding: 15vh 20px 20px 20px;
+        padding: 20px;
     }
 `
 

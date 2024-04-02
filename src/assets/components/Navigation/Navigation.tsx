@@ -16,8 +16,8 @@ export default function Navigation() {
     const menuList = [
         {name: 'Home', path: 'home', id: 0},
         {name: 'Skills', path: 'skills', id: 1},
-        {name: 'Portfolio', path: '', id: 2},
-        {name: 'Contact', path: '', id: 3},
+        {name: 'Portfolio', path: 'portfolio', id: 2},
+        {name: 'Contact', path: 'contact', id: 3},
     ]
 
     // todo rename this
@@ -51,8 +51,6 @@ export default function Navigation() {
 }
 
 const Nav = styled.nav`
-    position: sticky;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -46,12 +46,21 @@ export default function Capabilities() {
 }
 
 const CapabilitiesBlock = styled.div`
-    flex: 0 1 50%;
+    flex: 0 1 60%;
+
+    
+    @media (max-width: 1000px) {
+        flex: 0 1 70%;
+    }
 `
 const SectionTitle = styled.h4`
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
+    
+    @media(max-width: 1000px) {
+        
+    }
     
     @media (max-width: 645px) {
         font-size: 24px;
