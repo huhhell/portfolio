@@ -29,6 +29,7 @@ export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, 
 const NavCntOpen = styled.div `
     display: block;
     position: absolute;
+    z-index: 10000;
     top: 0;
     left: 0;
     width: 100vw;
