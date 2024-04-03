@@ -5,7 +5,7 @@ import Project from "../../data/projects.ts";
 interface Props {
     projects: Project[]
 }
-export default function Projects({projects}: Props) {
+export default function ProjectsList({projects}: Props) {
 
     return <Container>
         {projects.map(i => <ProjectContainer key={i.id}>

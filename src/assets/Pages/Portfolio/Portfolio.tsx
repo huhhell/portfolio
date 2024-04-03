@@ -1,7 +1,7 @@
 import {useState} from "react";
-import ProjectsCategories from "../../components/ProjectsCategories/ProjectsCategories.tsx";
+import ProjectsListCategories from "../../components/ProjectsListCategories/ProjectsListCategories.tsx";
 import styled from "styled-components";
-import Projects from "../../components/Projects/Projects.tsx";
+import ProjectsList from "../../components/ProjectsList/ProjectsList.tsx";
 import Project, {projects} from "../../data/projects.ts";
 
 export default function Portfolio() {
@@ -19,10 +19,10 @@ export default function Portfolio() {
     }
 
     return <Container>
-            <ProjectsCategories categories={categories}
-                                activeCategory={activeCategory}
-                                handleActiveCategory={handleActiveCategory}/>
-        <Projects projects={filterProjects(activeCategory)}></Projects>
+            <ProjectsListCategories categories={categories}
+                                    activeCategory={activeCategory}
+                                    handleActiveCategory={handleActiveCategory}/>
+        <ProjectsList projects={filterProjects(activeCategory)}></ProjectsList>
         </Container>
 }
 

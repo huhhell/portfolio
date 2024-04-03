@@ -6,7 +6,7 @@ interface Props {
     handleActiveCategory: (id: number) => void
 }
 
-export default function ProjectsCategories({categories, activeCategory, handleActiveCategory}: Props) {
+export default function ProjectsListCategories({categories, activeCategory, handleActiveCategory}: Props) {
 
     return <Container>
         {categories.map((i, id) => id === activeCategory ?
