@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import {MenuItemInterface} from "./Navigation.tsx";
 import closeImg from '../../img/nav/close.svg';
+import {Link} from "react-router-dom";
 
 interface Props {
     activeBlockId: number,
     isMenuOpen: boolean,
-    menuItems: MenuItem[],
+    menuItems: MenuItemInterface[],
     handleMenuSelect: (id: number) => void
     handleCloseMenu: () => void
 }
@@ -20,7 +21,11 @@ export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, 
             <CloseImg src={closeImg} alt='close' onClick={handleCloseMenu}/>
             <List>
                 {menuItems.map(i => i.id !== activeBlockId ?
-                    <ListItem onClick={() => handleMenuSelect(i.id)} key={i.id}>{i.name}</ListItem> :
+                    <ListItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
+                        <LinkItem to={i.path}>
+                            {i.name}
+                        </LinkItem>
+                    </ListItem> :
                     <ListItemSelected key={i.id}>{i.name}</ListItemSelected>)}
             </List>
         </NavCntOpen>
@@ -72,4 +77,9 @@ const CloseImg = styled.img `
     right: 20px;
     width: 30px;
     height: 30px;
+`
+
+const LinkItem = styled(Link)`
+    color: inherit;
+    font-size: inherit;
 `

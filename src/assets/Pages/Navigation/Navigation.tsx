@@ -4,7 +4,7 @@ import NavigationMobile from "./NavigationMobile.tsx";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 
-interface MenuItemInterface {
+export interface MenuItemInterface {
     name: string,
     path: string,
     id: number

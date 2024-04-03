@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import Navigation from "./assets/components/Navigation/Navigation.tsx";
+import Navigation from "./assets/Pages/Navigation/Navigation.tsx";
 import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/Routes/Routes.tsx";
 import {useState} from "react";
-
-
-
 
 function App() {
     const [activeProjectId, setActiveProjectId] = useState(0);
