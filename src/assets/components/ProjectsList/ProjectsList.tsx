@@ -12,13 +12,12 @@ export default function ProjectsList({projects}: Props) {
             <ProjectTitle>{i.name}</ProjectTitle>
             <ProjectDescription>{i.description}</ProjectDescription>
             <ProjectMore>Открыть</ProjectMore>
-            <ProjectImg src={i.img}></ProjectImg>
+            <ProjectImg src={i.img[0].img}></ProjectImg>
         </ProjectContainer> )}
     </Container>
 }
 
 
-// todo adaptive grid?
 const Container = styled.div`
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
