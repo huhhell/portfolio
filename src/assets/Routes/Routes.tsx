@@ -4,6 +4,7 @@ import Skills from "../Pages/Skills/Skills.tsx";
 import Portfolio from "../Pages/Portfolio/Portfolio.tsx";
 import ProjectPage from "../Pages/Project/Project.tsx";
 import {projects} from "../data/projects.ts";
+import Contact from "../Pages/Contact/Contact.tsx";
 
 interface Props {
     activeProject: number,
@@ -12,9 +13,10 @@ interface Props {
 
 export default ({activeProject, openProject}: Props) => {
     return <Routes>
-        <Route path='/home' element={<Home />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/skills' element={<Skills />} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/project' element={<ProjectPage project={projects[activeProject]} />} />
+        <Route path='/contact' element={<Contact />} />
     </Routes>
 }
