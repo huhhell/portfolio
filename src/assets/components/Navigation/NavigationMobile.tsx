@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {MenuItem} from "./Navigation.tsx";
+import {MenuItemInterface} from "./Navigation.tsx";
 import closeImg from '../../img/nav/close.svg';
 
 interface Props {

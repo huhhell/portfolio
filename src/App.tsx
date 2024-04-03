@@ -4,12 +4,11 @@ import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/Routes/Routes.tsx";
 import {useState} from "react";
 
-// <Link to='products' className='header__shop'>Shop</Link>
 
-// todo fix bug when refresh page state is gone but pages didnt change to initial in nav
+
+
 function App() {
-    const [activeProjectId, setActiveProjectId] = useState(5);
-    // const [activePage, setActivePage] = useState('');
+    const [activeProjectId, setActiveProjectId] = useState(0);
 
     function openProject(projectId: number) {
         setActiveProjectId(projectId)

@@ -1,28 +1,39 @@
-import {useState} from "react";
 import styled from "styled-components";
 import menuImg from '../../img/nav/menu.svg';
 import NavigationMobile from "./NavigationMobile.tsx";
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
-export interface MenuItem {
+interface MenuItemInterface {
     name: string,
     path: string,
     id: number
 }
 
 export default function Navigation() {
-    const [activeBlockId, setActiveBlockId] = useState(0);
+
+    const [activePageId, setActivePageId] = useState(() => {
+        const savedActivePageId = localStorage.getItem('activePageId');
+        return savedActivePageId !== null ? parseInt(savedActivePageId) : 0;
+    });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuList = [
-        {name: 'Home', path: 'home', id: 0},
+
+    function changeActivePage(id: number) {
+        setActivePageId(id)
+        localStorage.setItem('activePageId', id.toString());
+    }
+
+    const pagesList: MenuItemInterface[] = [
+        {name: 'Home', path: '', id: 0},
         {name: 'Skills', path: 'skills', id: 1},
         {name: 'Portfolio', path: 'portfolio', id: 2},
         {name: 'Contact', path: 'contact', id: 3},
     ]
 
+
     // todo rename this
     function handleMenuSelect (id: number) {
-        setActiveBlockId(id)
+        changeActivePage(id)
     }
 
     function handleToggleMenu() {
@@ -32,7 +43,7 @@ export default function Navigation() {
     return <Nav>
         <Logo>Виктория</Logo>
         <MenuCnt>
-            {menuList.map(i => i.id !== activeBlockId ?
+            {pagesList.map(i => i.id !== activePageId ?
                 <MenuItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
                     <LinkItem to={i.path}>{i.name}</LinkItem>
                 </MenuItem> :
@@ -42,9 +53,9 @@ export default function Navigation() {
         </MenuCnt>
         <MenuIcon src={menuImg} alt='open menu' onClick={handleToggleMenu} />
         <NavigationMobile
-            activeBlockId={activeBlockId}
+            activeBlockId={activePageId}
             isMenuOpen={isMenuOpen}
-            menuItems={menuList}
+            menuItems={pagesList}
             handleMenuSelect={handleMenuSelect}
             handleCloseMenu={handleToggleMenu} />
     </Nav>
@@ -55,8 +66,8 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    height: 15vh;
     background: #222;
+    border-bottom: 3px solid #444;
 
     @media (max-width: 645px) {
         padding: 20px;
