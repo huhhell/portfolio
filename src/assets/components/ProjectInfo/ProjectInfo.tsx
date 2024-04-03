@@ -11,7 +11,9 @@ export default function ProjectInfo({project}: Props) {
     return <Info>
         <Title>{project.name}</Title>
         <Text>{project.description}</Text>
-        <ProjectLinks tech={project.tech} links={project.links} />
+        <LinksContainer>
+            <ProjectLinks tech={project.tech} links={project.links} />
+        </LinksContainer>
     </Info>
 }
 
@@ -51,6 +53,13 @@ const Text = styled.p`
     }
     
     @media(max-width: 645px) {
-        margin-bottom: 40px;
+        margin-bottom: 0;
+    }
+`
+
+const LinksContainer = styled.div`
+    
+    @media(max-width: 645px) {
+        display: none;
     }
 `

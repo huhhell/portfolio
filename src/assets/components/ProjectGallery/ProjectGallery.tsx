@@ -33,6 +33,11 @@ const Container = styled.div`
     @media(max-width: 1000px) {
         flex: 0 0 70%;
     }
+    
+    @media(max-width: 645px) {
+        flex: 0 0 auto;
+        margin-bottom: 30px;
+    }
 `
 
 const MainImgCnt = styled.div`

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Project from "../../data/projects.ts";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo.tsx";
 import ProjectGallery from "../../components/ProjectGallery/ProjectGallery.tsx";
+import ProjectLinks from "../../components/ProjectLinks /ProjectLinks.tsx";
 
 
 interface Props {
@@ -14,6 +15,9 @@ export default function ProjectPage({project}: Props) {
     return <Container>
         <ProjectInfo project={project} />
         <ProjectGallery images={project.img}/>
+        <LinksContainer>
+            <ProjectLinks tech={project.tech} links={project.links} />
+        </LinksContainer>
     </Container>
 }
 
@@ -29,9 +33,14 @@ const Container = styled.section`
     
     @media(max-width: 645px) {
         flex-direction: column;
-        gap: 50px;
+        gap: 30px;
         padding: 20px;
     }
 `
 
-
+const LinksContainer = styled.div`
+    
+    @media(max-width: 645px) {
+        display: block;
+    }
+`

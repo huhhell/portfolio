@@ -73,6 +73,8 @@ const AdditionalTitle = styled.h4`
     @media (max-width: 645px) {
         font-size: 20px;
         margin-bottom: 15px;
+        
+        text-align: center;
     }
 `
 
@@ -87,6 +89,7 @@ const List = styled.ul`
 
     @media (max-width: 645px) {
         flex-direction: row;
+        justify-content: center;
     }
 `
 
