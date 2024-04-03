@@ -20,7 +20,7 @@ import {
     ProjectImage
 } from "./images.ts";
 
-interface ProjectLink {
+export interface ProjectLink {
     name: string,
     link: string,
     id: number,
