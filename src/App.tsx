@@ -8,7 +8,7 @@ import {useState} from "react";
 
 // todo fix bug when refresh page state is gone but pages didnt change to initial in nav
 function App() {
-    const [activeProjectId, setActiveProjectId] = useState(1);
+    const [activeProjectId, setActiveProjectId] = useState(5);
     // const [activePage, setActivePage] = useState('');
 
     function openProject(projectId: number) {

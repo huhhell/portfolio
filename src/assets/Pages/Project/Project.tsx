@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Project from "../../data/projects.ts";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo.tsx";
+import Gallery from "../../components/Gallery/Gallery.tsx";
 
 
 interface Props {
@@ -12,7 +13,7 @@ export default function ProjectPage({project}: Props) {
 
     return <Container>
         <ProjectInfo project={project} />
-        {/*<Gallery />*/}
+        <Gallery images={project.img}/>
     </Container>
 }
 
