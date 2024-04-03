@@ -6,7 +6,7 @@ interface Props {
     images: ProjectImage[],
 }
 
-export default function Gallery({images}: Props) {
+export default function ProjectGallery({images}: Props) {
     const [activeImgId,setActiveImgId] = useState(0);
 
     function changeActiveImageId(id: number) {
@@ -24,10 +24,15 @@ export default function Gallery({images}: Props) {
 }
 
 const Container = styled.div`
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    
+    @media(max-width: 1000px) {
+        flex: 0 0 70%;
+    }
 `
 
 const MainImgCnt = styled.div`
@@ -36,6 +41,13 @@ const MainImgCnt = styled.div`
     aspect-ratio: 5/3;
     overflow: hidden;
 
+    @media(max-width: 1000px) {
+        width: 50vw;
+    }
+    
+    @media(max-width: 645px) {
+        width: 100%;
+    }
 `
 
 const MainImg = styled.img`
@@ -52,7 +64,7 @@ const OptionsCnt = styled.div`
 
 const OptionsImgCnt = styled.div`
     width: 100px;
-    height: 100px;
+    height: 70px;
     overflow: hidden;
     
 `
