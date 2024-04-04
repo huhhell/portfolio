@@ -7,7 +7,7 @@ import {useState} from "react";
 export interface MenuItemInterface {
     name: string,
     path: string,
-    id: number
+    id: number,
 }
 
 interface Props {
@@ -59,7 +59,8 @@ export default function Navigation({isMenuOpen, toggleMenu}: Props) {
             isMenuOpen={isMenuOpen}
             menuItems={pagesList}
             handleMenuSelect={handleMenuSelect}
-            handleCloseMenu={toggleMenu} />
+            handleCloseMenu={toggleMenu}
+        />
     </Nav>
 }
 

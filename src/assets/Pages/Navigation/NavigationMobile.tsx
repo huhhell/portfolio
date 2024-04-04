@@ -12,24 +12,29 @@ interface Props {
     isMenuOpen: boolean,
     menuItems: MenuItemInterface[],
     handleMenuSelect: (id: number) => void
-    handleCloseMenu: () => void
+    handleCloseMenu: () => void,
 }
 
 
 // todo mb add here some socials
 export default function NavigationMobile({activePageId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
+    function selectPage(id: number) {
+        handleMenuSelect(id);
+        handleCloseMenu();
+    }
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :
         <NavCntOpen>
             <CloseImg src={closeImg} alt='close' onClick={handleCloseMenu}/>
             <List>
                 {menuItems.map(i => i.id !== activePageId ?
-                    <ListItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
+                    <ListItem onClick={() => selectPage(i.id)} key={i.id}>
                         <LinkItem to={i.path}>
                             {i.name}
                         </LinkItem>
                     </ListItem> :
-                    <ListItemSelected key={i.id}><LinkItem to={i.path}>{i.name}</LinkItem></ListItemSelected>)}
+                    <ListItemSelected onClick={() => selectPage(i.id)} key={i.id}><LinkItem
+                        to={i.path}>{i.name}</LinkItem></ListItemSelected>)}
             </List>
             <SocialsCnt>
                 <SocialsItem>

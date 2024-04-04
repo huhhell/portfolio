@@ -56,7 +56,7 @@ export const SCSS: Tech = {
 export const styledComponents: Tech = {
     name: 'Styled Components',
     img: styledComponentsImg,
-    id: 6
+    id: 6,
 }
 
 export const materialUI: Tech = {
