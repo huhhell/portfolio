@@ -10,13 +10,17 @@ export interface MenuItemInterface {
     id: number
 }
 
-export default function Navigation() {
+interface Props {
+    isMenuOpen: boolean,
+    toggleMenu: () => void
+}
+
+export default function Navigation({isMenuOpen, toggleMenu}: Props) {
 
     const [activePageId, setActivePageId] = useState(() => {
         const savedActivePageId = localStorage.getItem('activePageId');
         return savedActivePageId !== null ? parseInt(savedActivePageId) : 0;
     });
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     function changeActivePage(id: number) {
         setActivePageId(id)
@@ -36,9 +40,7 @@ export default function Navigation() {
         changeActivePage(id)
     }
 
-    function handleToggleMenu() {
-        setIsMenuOpen(!isMenuOpen)
-    }
+
 
     return <Nav>
         <Logo>Виктория</Logo>
@@ -51,13 +53,13 @@ export default function Navigation() {
                     <LinkItem to={i.path}>{i.name}</LinkItem>
                 </MenuItemSelected>)}
         </MenuCnt>
-        <MenuIcon src={menuImg} alt='open menu' onClick={handleToggleMenu} />
+        <MenuIcon src={menuImg} alt='open menu' onClick={toggleMenu} />
         <NavigationMobile
             activeBlockId={activePageId}
             isMenuOpen={isMenuOpen}
             menuItems={pagesList}
             handleMenuSelect={handleMenuSelect}
-            handleCloseMenu={handleToggleMenu} />
+            handleCloseMenu={toggleMenu} />
     </Nav>
 }
 

@@ -16,30 +16,6 @@ interface Props {
 // todo mb add here some socials
 // todo add routing
 export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
-    // const [isScrollLocked, setScrollLocked] = useState(false);
-    //
-    // const lockScroll = () => {
-    //     if (!isScrollLocked) {
-    //         document.body.style.overflow = 'hidden'; // Блокируем прокрутку
-    //         setScrollLocked(true);
-    //     }
-    // };
-    //
-    // const unlockScroll = () => {
-    //     if (isScrollLocked) {
-    //         document.body.style.overflow = ''; // Разблокируем прокрутку
-    //         setScrollLocked(false);
-    //     }
-    // };
-    //
-    // useEffect(() => {
-    //     if (isMenuOpen) {
-    //         lockScroll();
-    //     } else {
-    //         unlockScroll();
-    //     }
-    // }, [open]);
-
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :
         <NavCntOpen>
