@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export default function Home() {
 
@@ -19,8 +20,8 @@ export default function Home() {
                 знаний. Cпокойно воспринимаю информацию из документаций, статей и книг на английском языке.
             </Text>
             <LinksGroup>
-                <PortfolioLink>Портфолио</PortfolioLink>
-                <ContactLink>Контакты</ContactLink>
+                <PortfolioLink to='portfolio'>Портфолио</PortfolioLink>
+                <ContactLink to='contact'>Контакты</ContactLink>
             </LinksGroup>
         </Info>
     </HomeCnt>
@@ -132,10 +133,11 @@ const LinksGroup = styled.div`
     }
 `
 
-const LinkItem = styled.a`
+const LinkItem = styled(Link)`
     padding: 15px 30px;
     background: #333;
     border-radius: 30px;
+    color: #ffffff;
 
     @media (max-width:645px) {
         padding: 10px 20px;
