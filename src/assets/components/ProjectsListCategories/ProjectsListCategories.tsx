@@ -22,7 +22,7 @@ const Container = styled.ul`
     margin-bottom: 30px;
     
     @media(max-width: 645px) {
-        gap: 25px;
+        gap: 20px;
         margin-bottom: 20px;
     }
 `
