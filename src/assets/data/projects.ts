@@ -7,13 +7,15 @@ import {
     reactRouter,
     reactT,
     reactTestingLibrary,
-    SCSS, styledComponents,
+    SCSS,
+    styledComponents,
     Tech,
     typeScript
 } from "./tech.ts";
 import {
     Project01Images,
-    Project02Images, Project03Images,
+    Project02Images,
+    Project03Images,
     Project04Images,
     Project05Images,
     Project06Images,
@@ -29,7 +31,8 @@ export interface ProjectLink {
 export default interface Project {
     name: string,
     tech: Tech[],
-    description: string,
+    descriptionShort: string,
+    descriptionLong: string,
     img: ProjectImage[],
     links: ProjectLink[],
     category: string,
@@ -40,7 +43,8 @@ export const projects: Project[] = [
     {
         name: 'Studio Retro website',
         tech: [reactT, typeScript],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project01Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'React',
@@ -49,7 +53,8 @@ export const projects: Project[] = [
     {
         name: 'E-Commerce',
         tech: [HTML, SCSS, materialUI],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project02Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'HTML / CSS',
@@ -58,7 +63,8 @@ export const projects: Project[] = [
     {
         name: 'Portfolio',
         tech: [reactT, reactRouter, reactTestingLibrary, jest],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project03Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'Components',
@@ -67,7 +73,8 @@ export const projects: Project[] = [
     {
         name: 'Travel Website',
         tech: [reactT, javaScript, styledComponents],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project04Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'React',
@@ -76,7 +83,8 @@ export const projects: Project[] = [
     {
         name: 'Web Studio',
         tech: [HTML, CSS, typeScript],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project05Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'React',
@@ -85,7 +93,8 @@ export const projects: Project[] = [
     {
         name: 'Movie Website',
         tech: [HTML, CSS, typeScript],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget commodo quam. Curabitur urna ipsum, vehicula et nibh eu, congue dignissim urna. Integer ornare, libero placerat finibus congue, mauris nulla.',
+        descriptionLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec neque nulla. Donec a elit quis dui lobortis pharetra. Nulla nisl velit, gravida dignissim vulputate ac, tempus vitae arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae elementum elit. Proin at commodo sem, sit amet tempus tellus. Sed venenatis viverra sapien, ac facilisis magna facilisis eget. Integer aliquet leo eget leo placerat, ut elementum nulla scelerisque. Cras sit amet ultrices libero. Proin lectus tortor, imperdiet quis ligula rutrum, elementum ultrices justo. Fusce pellentesque libero augue, viverra consequat velit molestie id. Sed convallis condimentum quam ut scelerisque.',
         img: Project06Images,
         links: [{name: 'GitHub', link: '', id: 0}, {name: 'Website', link: '', id: 2}, {name: 'Notion', link: '', id: 3}],
         category: 'HTML / CSS',

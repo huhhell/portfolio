@@ -10,7 +10,7 @@ export default function ProjectInfo({project}: Props) {
 
     return <Info>
         <Title>{project.name}</Title>
-        <Text>{project.description}</Text>
+        <Text>{project.descriptionLong}</Text>
         <LinksContainer>
             <ProjectLinks tech={project.tech} links={project.links} />
         </LinksContainer>

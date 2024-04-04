@@ -10,7 +10,7 @@ export default function ProjectsList({projects}: Props) {
     return <Container>
         {projects.map(i => <ProjectContainer key={i.id}>
             <ProjectTitle>{i.name}</ProjectTitle>
-            <ProjectDescription>{i.description}</ProjectDescription>
+            <ProjectDescription>{i.descriptionShort}</ProjectDescription>
             <ProjectMore>Открыть</ProjectMore>
             <ProjectImg src={i.img[0].img}></ProjectImg>
         </ProjectContainer> )}
