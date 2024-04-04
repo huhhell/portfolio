@@ -33,7 +33,7 @@ const Container = styled.section`
     @media(max-width: 645px) {
         flex-direction: column;
         gap: 30px;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
     }
 `
 
