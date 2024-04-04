@@ -2,8 +2,10 @@ import styled from "styled-components";
 import {MenuItemInterface} from "./Navigation.tsx";
 import closeImg from '../../img/nav/close.svg';
 import {Link} from "react-router-dom";
-
-// import {useEffect, useState} from "react";
+import gitHubImg from '../../img/nav/github.svg'
+import mailImg from '../../img/nav/mail.svg'
+import tgImg from '../../img/nav/tg.svg'
+import resumeImg from '../../img/nav/notion.svg'
 
 interface Props {
     activePageId: number,
@@ -15,7 +17,6 @@ interface Props {
 
 
 // todo mb add here some socials
-// todo add routing
 export default function NavigationMobile({activePageId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :
@@ -30,6 +31,20 @@ export default function NavigationMobile({activePageId, isMenuOpen, menuItems, h
                     </ListItem> :
                     <ListItemSelected key={i.id}><LinkItem to={i.path}>{i.name}</LinkItem></ListItemSelected>)}
             </List>
+            <SocialsCnt>
+                <SocialsItem>
+                    <SocialsImg src={gitHubImg}/>
+                </SocialsItem>
+                <SocialsItem>
+                    <SocialsImg src={mailImg}/>
+                </SocialsItem>
+                <SocialsItem>
+                    <SocialsImg src={tgImg}/>
+                </SocialsItem>
+                <SocialsItem>
+                    <SocialsImg src={resumeImg}/>
+                </SocialsItem>
+            </SocialsCnt>
         </NavCntOpen>
 }
 
@@ -84,4 +99,23 @@ const CloseImg = styled.img `
 const LinkItem = styled(Link)`
     color: inherit;
     font-size: inherit;
+`
+
+const SocialsCnt = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #444;
+`
+
+const SocialsItem = styled.a`
+    
+`
+
+const SocialsImg = styled.img`
 `
