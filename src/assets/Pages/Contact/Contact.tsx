@@ -4,6 +4,7 @@ import phoneImg from '../../img/contact/phone.svg'
 import tgImg from '../../img/contact/tg.svg'
 import hhImg from '../../img/contact/hh.svg'
 import locationImg from '../../img/contact/location.svg'
+import githubImg from '../../img/contact/github.svg'
 
 export default function Contact() {
     return <Container>
@@ -12,6 +13,12 @@ export default function Contact() {
         </AvatarCnt>
 
         <Info>
+            <Item>
+                <ItemLink>
+                    <ItemIcon src={githubImg}/>
+                    <ItemName>huhhell</ItemName>
+                </ItemLink>
+            </Item>
             <Item>
                 <ItemLink>
                     <ItemIcon src={mailImg}/>

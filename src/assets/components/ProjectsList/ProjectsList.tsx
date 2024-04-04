@@ -74,12 +74,31 @@ const ProjectImg = styled.img`
     &:hover {
         opacity: 0.2;
     }
+    
+    @media(max-width: 1000px) {
+        opacity: 1;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
 `
 
 const ProjectTitle = styled.h3`
     font-size: 20px;
     margin-bottom: 15px;
     text-align: center;
+
+    @media (max-width: 1000px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: rgba(34, 34, 34, 0.5);
+        z-index: 222;
+        margin-bottom: 0;
+    }
 `
 
 const ProjectDescription = styled.p`
@@ -87,6 +106,10 @@ const ProjectDescription = styled.p`
     line-height: 140%;
     text-align: center;
     margin-bottom: 20px;
+    
+    @media(max-width: 1000px) {
+        display: none;
+    }
 `
 
 const LinkCnt = styled(Link)`

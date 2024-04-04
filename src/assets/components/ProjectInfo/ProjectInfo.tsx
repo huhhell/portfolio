@@ -40,6 +40,8 @@ const Title = styled.h1`
     }
     
     @media(max-width: 645px) {
+        font-size: 25px;
+        margin-bottom: 15px;
     }
 `
 
