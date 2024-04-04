@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 // import {useEffect, useState} from "react";
 
 interface Props {
-    activeBlockId: number,
+    activePageId: number,
     isMenuOpen: boolean,
     menuItems: MenuItemInterface[],
     handleMenuSelect: (id: number) => void
@@ -15,13 +15,13 @@ interface Props {
 
 // todo mb add here some socials
 // todo add routing
-export default function NavigationMobile({activeBlockId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
+export default function NavigationMobile({activePageId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
 
     return !isMenuOpen ? <NavCntClose></NavCntClose> :
         <NavCntOpen>
             <CloseImg src={closeImg} alt='close' onClick={handleCloseMenu}/>
             <List>
-                {menuItems.map(i => i.id !== activeBlockId ?
+                {menuItems.map(i => i.id !== activePageId ?
                     <ListItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
                         <LinkItem to={i.path}>
                             {i.name}

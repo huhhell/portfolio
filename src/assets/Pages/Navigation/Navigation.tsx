@@ -55,7 +55,7 @@ export default function Navigation({isMenuOpen, toggleMenu}: Props) {
         </MenuCnt>
         <MenuIcon src={menuImg} alt='open menu' onClick={toggleMenu} />
         <NavigationMobile
-            activeBlockId={activePageId}
+            activePageId={activePageId}
             isMenuOpen={isMenuOpen}
             menuItems={pagesList}
             handleMenuSelect={handleMenuSelect}
