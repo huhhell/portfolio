@@ -4,7 +4,12 @@ import styled from "styled-components";
 import ProjectsList from "../../components/ProjectsList/ProjectsList.tsx";
 import Project, {projects} from "../../data/projects.ts";
 
-export default function Portfolio() {
+
+interface Props {
+    openProject: (id: number) => void
+}
+
+export default function Portfolio({openProject}: Props) {
     const [activeCategory, setActiveCategory] = useState(0)
     const categories = ['All', 'React', 'HTML / CSS', 'Components']
 
@@ -22,7 +27,7 @@ export default function Portfolio() {
             <ProjectsListCategories categories={categories}
                                     activeCategory={activeCategory}
                                     handleActiveCategory={handleActiveCategory}/>
-        <ProjectsList projects={filterProjects(activeCategory)}></ProjectsList>
+        <ProjectsList projects={filterProjects(activeCategory)} openProject={openProject}></ProjectsList>
         </Container>
 }
 

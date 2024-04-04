@@ -15,7 +15,7 @@ export default ({activeProject, openProject}: Props) => {
     return <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/skills' element={<Skills />} />
-        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/portfolio' element={<Portfolio openProject={openProject}/>} />
         <Route path='/project' element={<ProjectPage project={projects[activeProject]} />} />
         <Route path='/contact' element={<Contact />} />
     </Routes>

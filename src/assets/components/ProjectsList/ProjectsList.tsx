@@ -1,18 +1,22 @@
 import styled from "styled-components";
 import Project from "../../data/projects.ts";
+import {Link} from "react-router-dom";
 
 
 interface Props {
-    projects: Project[]
+    projects: Project[],
+    openProject: (id: number) => void,
 }
-export default function ProjectsList({projects}: Props) {
+
+export default function ProjectsList({projects, openProject}: Props) {
 
     return <Container>
-        {projects.map(i => <ProjectContainer key={i.id}>
-            <ProjectTitle>{i.name}</ProjectTitle>
-            <ProjectDescription>{i.descriptionShort}</ProjectDescription>
-            <ProjectMore>Открыть</ProjectMore>
-            <ProjectImg src={i.img[0].img}></ProjectImg>
+        {projects.map(i => <ProjectContainer key={i.id} onClick={() => openProject(i.id)}>
+            <LinkCnt to='/project'>
+                <ProjectTitle>{i.name}</ProjectTitle>
+                <ProjectDescription>{i.descriptionShort}</ProjectDescription>
+                <ProjectImg src={i.img[0].img}></ProjectImg>
+            </LinkCnt>
         </ProjectContainer> )}
     </Container>
 }
@@ -85,13 +89,8 @@ const ProjectDescription = styled.p`
     margin-bottom: 20px;
 `
 
-const ProjectMore = styled.button`
-    padding: 7px 20px;
-    font-size: 18px;
-    border-radius: 20px;
-    background: #000;
+const LinkCnt = styled(Link)`
     color: #ffffff;
-    border: 2px solid #b0b0b0;
 `
 
 
