@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {MenuItemInterface} from "./Navigation.tsx";
 import closeImg from '../../img/nav/close.svg';
 import {Link} from "react-router-dom";
+
 // import {useEffect, useState} from "react";
 
 interface Props {
@@ -27,7 +28,7 @@ export default function NavigationMobile({activePageId, isMenuOpen, menuItems, h
                             {i.name}
                         </LinkItem>
                     </ListItem> :
-                    <ListItemSelected key={i.id}>{i.name}</ListItemSelected>)}
+                    <ListItemSelected key={i.id}><LinkItem to={i.path}>{i.name}</LinkItem></ListItemSelected>)}
             </List>
         </NavCntOpen>
 }

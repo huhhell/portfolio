@@ -16,7 +16,7 @@ export default function ProjectGallery({images}: Props) {
     return <Container>
         <MainImgCnt><MainImg src={images[activeImgId].img}/></MainImgCnt>
         <OptionsCnt>
-            {images.map(i => i.id === activeImgId ? <> </> : <OptionsImgCnt key={i.id} onClick={() => changeActiveImageId(i.id)}>
+            {images.map(i => i.id === activeImgId ? <div key={i.id}> </div> : <OptionsImgCnt key={i.id} onClick={() => changeActiveImageId(i.id)}>
                 <OptionImg src={i.img} alt={i.alt} />
             </OptionsImgCnt>)}
         </OptionsCnt>
