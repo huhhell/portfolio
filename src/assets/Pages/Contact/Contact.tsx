@@ -5,6 +5,7 @@ import tgImg from '../../img/contact/tg.svg'
 import hhImg from '../../img/contact/hh.svg'
 import locationImg from '../../img/contact/location.svg'
 import githubImg from '../../img/contact/github.svg'
+import cvImg from '../../img/contact/cv.svg'
 
 export default function Contact() {
     return <Container>
@@ -47,6 +48,12 @@ export default function Contact() {
                 <ItemLink>
                     <ItemIcon src={locationImg}/>
                     <ItemName>Novosibirsk, Russia</ItemName>
+                </ItemLink>
+            </Item>
+            <Item>
+                <ItemLink>
+                    <ItemIcon src={cvImg}/>
+                    <ItemName>CV</ItemName>
                 </ItemLink>
             </Item>
         </Info>
