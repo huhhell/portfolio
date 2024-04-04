@@ -7,7 +7,6 @@ import ProjectLinks from "../../components/ProjectLinks /ProjectLinks.tsx";
 
 interface Props {
     project: Project,
-    // openProject: (id: number) => void
 }
 
 export default function ProjectPage({project}: Props) {
@@ -39,6 +38,7 @@ const Container = styled.section`
 `
 
 const LinksContainer = styled.div`
+    display: none;
     
     @media(max-width: 645px) {
         display: block;
