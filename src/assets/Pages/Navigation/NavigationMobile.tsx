@@ -76,14 +76,14 @@ const List = styled.ul `
 
 const ListItem = styled.li `
     padding: 10px 0;
-    font-size: 24px;
+    font-size: 30px;
     color: rgba(255, 255, 255, 0.50);
     text-align: center;
 `
 
 const ListItemSelected = styled.li `
     padding: 10px 0;
-    font-size: 24px;
+    font-size: 30px;
     color: #fff;
     text-align: center;
 `
@@ -92,8 +92,8 @@ const CloseImg = styled.img `
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 `
 
 const LinkItem = styled(Link)`
