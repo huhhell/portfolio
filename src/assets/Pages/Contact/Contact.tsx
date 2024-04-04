@@ -94,9 +94,13 @@ const AvatarImg = styled.img`
 `
 
 const Info = styled.div`
-display: flex;
+    display: flex;
     flex-direction: column;
     gap: 30px;
+    
+    @media(max-width: 900px) {
+        gap: 10px;
+    }
 `
 
 const Item = styled.div``
@@ -104,10 +108,19 @@ const Item = styled.div``
 const ItemIcon = styled.img`
     width: 40px;
     height: auto;
+    
+    @media(max-width: 900px) {
+        width: 30px;
+        height: auto;
+    }
 `
 
 const ItemName = styled.p`
     font-size: 24px;
+    
+    @media(max-width: 900px) {
+        font-size: 20px;
+    }
 `
 
 const ItemLink = styled.a`
