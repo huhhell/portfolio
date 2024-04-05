@@ -1,6 +1,7 @@
 import githubImg from "../../img/links/github.svg";
 import webImg from "../../img/links/web.svg";
 import notionImg from "../../img/links/notion.svg";
+import figmaImg from '../../img/links/figma.svg';
 import styled from "styled-components";
 import {Tech} from "../../data/tech.ts";
 import {ProjectLink} from "../../data/projects.ts";
@@ -20,6 +21,8 @@ export default function ProjectLinks({tech, links}: Props) {
                 return webImg
             case 'Notion':
                 return notionImg
+            case 'Figma':
+                return figmaImg
             default:
                 return webImg
         }
