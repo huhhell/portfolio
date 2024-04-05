@@ -66,6 +66,8 @@ const ProjectContainer = styled.div`
 const ProjectImg = styled.img`
     position: absolute;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
