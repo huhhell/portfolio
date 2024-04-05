@@ -5,8 +5,13 @@ import Routes from "./assets/Routes/Routes.tsx";
 import {useState} from "react";
 
 function App() {
-    const [activeProjectId, setActiveProjectId] = useState(0);
+    const [activeProjectId, setActiveProjectId] = useState(() => {
+        const savedActiveProjectId = localStorage.getItem('activeProjectId');
+        return savedActiveProjectId !== null ? parseInt(savedActiveProjectId) : 0;
+    });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen)
