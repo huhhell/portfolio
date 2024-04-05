@@ -8,17 +8,17 @@ import {
     reactT,
     reactTestingLibrary,
     SCSS,
-    styledComponents,
+    // styledComponents,
     Tech,
     typeScript
 } from "./tech.ts";
 import {
-    Project01Images,
-    Project02Images,
-    Project03Images,
-    Project04Images,
-    Project05Images,
-    Project06Images,
+    // Project01Images,
+    // Project02Images,
+    // Project03Images,
+    // Project04Images,
+    // Project05Images,
+    // Project06Images,
     Project07Images,
     Project09Images,
     Project10Images,
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Todo',
-        tech: [reactT, SCSS, typeScript],
+        tech: [reactT, SCSS, typeScript, jest, reactTestingLibrary],
         descriptionShort: 'Менеджер задач с возможностью сортировки по категориям и всеми базовыми, необходимыми функциями.',
         descriptionLong: 'Небольшое приложение менеджер задач. Реализованы функции добавления, удаления и редактирования задачи. Возможность соритровки задач по категориям, добавление новой категории и назначения ей своего собственного цвета. Приложение полностью покрыто e2e, integration и unit тестами (в процессе). ',
         img: Project13Images,
