@@ -1,6 +1,7 @@
 import {ProjectImage} from "../../data/images.ts";
 import styled from "styled-components";
 import {useState} from "react";
+import OpenedImage from "../OpenedImage/OpenedImage.tsx";
 
 interface Props {
     images: ProjectImage[],
@@ -8,20 +9,26 @@ interface Props {
 
 export default function ProjectGallery({images}: Props) {
     const [activeImgId, setActiveImgId] = useState(0);
+    const [isImgOpen, setIsImageOpen] = useState(false);
 
     function handleChooseImg(id: number) {
         setActiveImgId(id)
     }
 
+    function toggleImg() {
+        setIsImageOpen(!isImgOpen)
+    }
+
     return <Container>
         <ImgCnt>
-            <MainImg src={images[activeImgId].img}/>
+            <MainImg src={images[activeImgId].img} onClick={toggleImg}/>
         </ImgCnt>
         <DotsCnt>
             {images.map(i => i.id === activeImgId ?
                 <DotItemSelected key={i.id}></DotItemSelected> :
                 <DotItem onClick={() => handleChooseImg(i.id)} key={i.id}></DotItem>)}
         </DotsCnt>
+        {isImgOpen ? <OpenedImage image={images[activeImgId]} closeImage={toggleImg}/> : <></>}
     </Container>
 }
 
