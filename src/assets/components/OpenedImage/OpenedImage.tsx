@@ -23,6 +23,7 @@ const Container = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
+    max-width: 1400px;
     background: rgba(0, 0, 0, 0.8);
     padding: 40px;
     z-index: 1000;
@@ -54,7 +55,7 @@ const CloseBtnImg = styled.img`
 `
 
 const Img = styled.img`
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 `
