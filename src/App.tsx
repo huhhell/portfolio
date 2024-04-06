@@ -11,9 +11,6 @@ function App() {
     });
     const [isScrollDisabled, setIsScrollDisabled] = useState(false);
 
-
-
-
     function toggleScroll() {
         setIsScrollDisabled(!isScrollDisabled)
     }

@@ -16,7 +16,6 @@ interface Props {
 
 export default function Navigation({toggleScroll}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const [activePageId, setActivePageId] = useState(() => {
         const savedActivePageId = localStorage.getItem('activePageId');
         return savedActivePageId !== null ? parseInt(savedActivePageId) : 0;
@@ -27,32 +26,23 @@ export default function Navigation({toggleScroll}: Props) {
         toggleScroll();
     }
 
-
-    function changeActivePage(id: number) {
-        setActivePageId(id)
-        localStorage.setItem('activePageId', id.toString());
-    }
-
-    const pagesList: MenuItemInterface[] = [
+    const menuItems: MenuItemInterface[] = [
         {name: 'Home', path: '', id: 0},
         {name: 'Skills', path: 'skills', id: 1},
         {name: 'Portfolio', path: 'portfolio', id: 2},
         {name: 'Contact', path: 'contact', id: 3},
     ]
 
-
-    // todo rename this
-    function handleMenuSelect (id: number) {
-        changeActivePage(id)
+    function changeActivePage (id: number) {
+        setActivePageId(id)
+        localStorage.setItem('activePageId', id.toString());
     }
-
-
 
     return <Nav>
         <Logo>Виктория</Logo>
         <MenuCnt>
-            {pagesList.map(i => i.id !== activePageId ?
-                <MenuItem onClick={() => handleMenuSelect(i.id)} key={i.id}>
+            {menuItems.map(i => i.id !== activePageId ?
+                <MenuItem onClick={() => changeActivePage(i.id)} key={i.id}>
                     <LinkItem to={i.path}>{i.name}</LinkItem>
                 </MenuItem> :
                 <MenuItemSelected key={i.id}>
@@ -63,8 +53,8 @@ export default function Navigation({toggleScroll}: Props) {
         <NavigationMobile
             activePageId={activePageId}
             isMenuOpen={isMenuOpen}
-            menuItems={pagesList}
-            handleMenuSelect={handleMenuSelect}
+            menuItems={menuItems}
+            handleMenuSelect={changeActivePage}
             handleCloseMenu={toggleMenu}
         />
     </Nav>

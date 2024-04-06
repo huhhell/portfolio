@@ -13,10 +13,9 @@ export default function Capabilities() {
             <CapabilitiesInfo>
                 <CapabilitiesTitle>React</CapabilitiesTitle>
                 <CapabilitiesText>
-                    {/* todo выделить библиотеки */}
                     Занимаюсь созданием одностраничных и многостраничных веб-страниц. Базируюсь на методологии Робета
-                    Мартина при написании кода. Из фреймворков наиболее часто использую: Material UI, Styled Components,
-                    React Router, React Testing Library.
+                    Мартина при написании кода. Из фреймворков наиболее часто использую: <Highlight>Material UI</Highlight>, <Highlight>Styled
+                    Components</Highlight>,<Highlight>React Router</Highlight>, <Highlight>React Testing Library</Highlight>.
                 </CapabilitiesText>
             </CapabilitiesInfo>
         </CapabilitiesItem>
@@ -26,8 +25,8 @@ export default function Capabilities() {
                 <CapabilitiesTitle>JavaScript / Typescript</CapabilitiesTitle>
                 <CapabilitiesText>
                     Прекрасно владею навыками браузерного JS, написала более 20 проектов в связке ‘HTML / JS’. Знаю
-                    когда стоит использовать React, а когда можно обойтись без него. Технологии которые использую: Jest,
-                    MUI.
+                    когда стоит использовать React, а когда можно обойтись без него. Технологии которые использую: <Highlight>Jest</Highlight>,
+                    <Highlight>MUI</Highlight>.
                 </CapabilitiesText>
             </CapabilitiesInfo>
         </CapabilitiesItem>
@@ -38,7 +37,7 @@ export default function Capabilities() {
                 <CapabilitiesText>
                     Люблю простую и элегантную верстку. Отдельное внимание уделяю отзывчивости, кроссбраузерности и
                     доступности (для маломобильных людей). Моя позиция - иногда стоит присмотреться к “ванильной"
-                    разработке, нежели настраивать технологии поверх самого простого сайта. Из используемых технологий предпочитаю SCSS.
+                    разработке, нежели настраивать технологии поверх самого простого сайта. Из используемых технологий предпочитаю <Highlight>SCSS</Highlight>.
                 </CapabilitiesText>
             </CapabilitiesInfo>
         </CapabilitiesItem>
@@ -104,4 +103,11 @@ const CapabilitiesText = styled.p`
     
     @media (max-width: 645px) {
     }
+`
+
+const Highlight = styled.div`
+    display: inline-block;
+    padding: 2px;
+    background: rgba(255, 255, 0, 0.1);
+    -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;
 `

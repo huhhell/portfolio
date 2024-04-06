@@ -37,8 +37,6 @@ export interface ProjectImage {
     id: number
 }
 
-
-
 export const Project01Images: ProjectImage[] = [
     {img: project01Img01, alt: 'lorem', id: 0},
     {img: project01Img02, alt: 'lorem', id: 1},

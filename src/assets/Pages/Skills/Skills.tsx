@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import Capabilities from "../../components/Skills/Capabilities.tsx";
-import Languages from "../../components/Skills/Languages .tsx";
+import Capabilities from "../../components/Capabilities /Capabilities.tsx";
+import Languages from "../../components/Languages/Languages .tsx";
 
 
-// todo add a text here
 export default function Skills() {
 
     return <SkillsCnt>

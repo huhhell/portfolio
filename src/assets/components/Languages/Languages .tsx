@@ -27,14 +27,12 @@ export default function Languages() {
                     <SkillsItemProgress $progress={i.progress}></SkillsItemProgress>
                 </SkillsItemProgressCnt>
             </SkillsItem>)}
-            {/*<SkillsItem>*/}
-            {/*    <SkillsItemName></SkillsItemName>*/}
-            {/*</SkillsItem>*/}
         </SkillsList>
     </SkillsBlock>
         <LanguagesMobile languages={languages} />
         </>
 }
+
 
 const SkillsBlock = styled.div`
     flex: 0 1 40%;
@@ -61,9 +59,7 @@ const SkillsList = styled.ul`
     gap: 25px;
 `
 
-const SkillsItem = styled.li`
-    
-`
+const SkillsItem = styled.li``
 
 const SkillsItemName = styled.p`
     font-size: 20px;

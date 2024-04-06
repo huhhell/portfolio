@@ -42,9 +42,6 @@ const Title = styled.h4`
 `
 
 const List = styled.ul`
-    //display: flex;
-    //align-items: center;
-    //justify-content: space-between;
     gap: 20px;
     
     display: grid;
@@ -92,7 +89,6 @@ const ProgressColor = styled.div<{$progress?: string}>`
     border-radius: 50%;
     --value: 70%;
     background: conic-gradient(#237CED ${props => props.$progress}, transparent 0);
-    //transform: rotate(270deg);
     padding: 10px;
     
     @media(max-width: 645px) {

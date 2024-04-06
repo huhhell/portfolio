@@ -16,7 +16,6 @@ interface Props {
 }
 
 
-// todo mb add here some socials
 export default function NavigationMobile({activePageId, isMenuOpen, menuItems, handleMenuSelect, handleCloseMenu}: Props) {
     function selectPage(id: number) {
         handleMenuSelect(id);
@@ -38,16 +37,16 @@ export default function NavigationMobile({activePageId, isMenuOpen, menuItems, h
             </List>
             <SocialsCnt>
                 <SocialsItem href='https://github.com/huhhell' target='_blank'>
-                    <SocialsImg src={gitHubImg}/>
+                    <SocialsImg src={gitHubImg} alt='github'/>
                 </SocialsItem>
                 <SocialsItem href='mailto:vikalited@mail.ru' target='_blank'>
-                    <SocialsImg src={mailImg}/>
+                    <SocialsImg src={mailImg} alt='email'/>
                 </SocialsItem>
                 <SocialsItem href='https://t.me/huhhell' target='_blank'>
-                    <SocialsImg src={tgImg}/>
+                    <SocialsImg src={tgImg} alt='telegram'/>
                 </SocialsItem>
                 <SocialsItem href='' target='_blank'>
-                    <SocialsImg src={resumeImg}/>
+                    <SocialsImg src={resumeImg} alt='CV'/>
                 </SocialsItem>
             </SocialsCnt>
         </NavCntOpen>

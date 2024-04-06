@@ -14,7 +14,6 @@ export default function ProjectPage({project, toggleScroll}: Props) {
 
     return <Container>
         <ProjectInfo project={project} />
-        {/*<ProjectGallery images={project.img}/>*/}
         <ProjectGallery images={project.img} toggleScroll={toggleScroll}/>
         <LinksContainer>
             <ProjectLinks tech={project.tech} links={project.links} />
