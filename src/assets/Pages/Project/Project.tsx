@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Project from "../../data/projects.ts";
+import Project from "../../data/projects.tsx";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo.tsx";
 import ProjectLinks from "../../components/ProjectLinks /ProjectLinks.tsx";
 import ProjectGallery from "../../components/ProjectGallery/ProjectGallery.tsx";

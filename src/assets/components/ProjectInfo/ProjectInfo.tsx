@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Project from "../../data/projects.ts";
+import Project from "../../data/projects.tsx";
 import ProjectLinks from "../ProjectLinks /ProjectLinks.tsx";
 
 interface Props {
@@ -48,10 +48,10 @@ const Title = styled.h1`
 const Text = styled.p`
     font-size: 20px;
     margin-bottom: 50px;
+    line-height: 120%;
     
     @media(max-width: 1000px) {
         font-size: 16px;
-        line-height: 120%;
     }
     
     @media(max-width: 645px) {
