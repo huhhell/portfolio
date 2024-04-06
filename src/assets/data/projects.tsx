@@ -99,7 +99,7 @@ export const projects: Project[] = [
         name: 'Hydra Landing',
         tech: [HTML, CSS, javaScript],
         descriptionShort: 'Адаптивный лэндинг для компании которая занимается vr разработкой',
-        descriptionLong: 'Все, больше не можу',
+        descriptionLong: 'Адаптивная лэндинг страница. Создана по макету из Figma с помощью HTML, SCSS, JavaScript. Блоки со списками адаптированы под мобильное устройство в качестве галерей, так же добавлено бургер-меню.',
         img: Project12Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/hydraLanding', id: 0}, {name: 'Website', link: 'https://hydra-landing-blond.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/HydraLanding-00afb6e077614f748b80fe356e105e96?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1196146735025729739/hydra-landing-page', id: 4}],
         category: 'HTML / CSS',

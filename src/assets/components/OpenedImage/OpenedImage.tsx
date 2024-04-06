@@ -65,4 +65,9 @@ const Img = styled.img`
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+    
+    @media(max-width: 645px) {
+        max-width: 90%;
+        max-height: 90%;
+    }
 `
