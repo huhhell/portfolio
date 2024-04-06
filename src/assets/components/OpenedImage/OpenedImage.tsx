@@ -1,6 +1,7 @@
 import {ProjectImage} from "../../data/images.ts";
 import styled from "styled-components";
 import closeImg from '../../img/nav/close.svg';
+import {useOutsideClick} from "../../hooks/useOutsideClick.tsx";
 
 interface Props {
     image: ProjectImage;
@@ -8,12 +9,16 @@ interface Props {
 }
 
 export default function OpenedImage({image, closeImage}: Props) {
+    const ref = useOutsideClick(() => {
+        closeImage();
+    });
+
 
     return <Container>
         <CloseBtn onClick={closeImage}>
             <CloseBtnImg src={closeImg}/>
         </CloseBtn>
-        <Img src={image.img} alt={image.alt}/>
+        <Img src={image.img} alt={image.alt} ref={ref}/>
     </Container>
 }
 
@@ -55,7 +60,9 @@ const CloseBtnImg = styled.img`
 `
 
 const Img = styled.img`
-    width: 80%;
-    height: 80%;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
 `
