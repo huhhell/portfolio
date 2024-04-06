@@ -42,7 +42,7 @@ export default function ProjectLinks({tech, links}: Props) {
             <AdditionalTitle>Ссылки</AdditionalTitle>
             <List>
                 {links.map(i => <Item key={i.id}>
-                    <ItemLink href={i.link}>
+                    <ItemLink href={i.link} target='_blank'>
                         <ItemIcon src={getImg(i.name)}></ItemIcon>
                         <ItemName>{i.name}</ItemName>
                     </ItemLink>
@@ -56,6 +56,11 @@ export default function ProjectLinks({tech, links}: Props) {
 const FlexCnt = styled.div`
     display: flex;
     gap: 20px;
+    
+    @media(max-width: 645px) {
+        flex-direction: column;
+        gap: 40px;
+    }
 
 `
 
