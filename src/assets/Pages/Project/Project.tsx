@@ -7,14 +7,15 @@ import ProjectGallery from "../../components/ProjectGallery/ProjectGallery.tsx";
 
 interface Props {
     project: Project,
+    toggleScroll: () => void,
 }
 
-export default function ProjectPage({project}: Props) {
+export default function ProjectPage({project, toggleScroll}: Props) {
 
     return <Container>
         <ProjectInfo project={project} />
         {/*<ProjectGallery images={project.img}/>*/}
-        <ProjectGallery images={project.img} />
+        <ProjectGallery images={project.img} toggleScroll={toggleScroll}/>
         <LinksContainer>
             <ProjectLinks tech={project.tech} links={project.links} />
         </LinksContainer>

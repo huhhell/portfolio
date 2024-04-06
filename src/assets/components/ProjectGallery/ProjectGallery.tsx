@@ -5,9 +5,10 @@ import OpenedImage from "../OpenedImage/OpenedImage.tsx";
 
 interface Props {
     images: ProjectImage[],
+    toggleScroll: () => void,
 }
 
-export default function ProjectGallery({images}: Props) {
+export default function ProjectGallery({images, toggleScroll}: Props) {
     const [activeImgId, setActiveImgId] = useState(0);
     const [isImgOpen, setIsImageOpen] = useState(false);
 
@@ -17,6 +18,7 @@ export default function ProjectGallery({images}: Props) {
 
     function toggleImg() {
         setIsImageOpen(!isImgOpen)
+        toggleScroll();
     }
 
     return <Container>

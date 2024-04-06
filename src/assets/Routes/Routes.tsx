@@ -8,15 +8,16 @@ import Contact from "../Pages/Contact/Contact.tsx";
 
 interface Props {
     activeProject: number,
-    openProject: (id: number) => void
+    openProject: (id: number) => void,
+    toggleScroll: () => void,
 }
 
-export default ({activeProject, openProject}: Props) => {
+export default ({activeProject, openProject, toggleScroll}: Props) => {
     return <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/skills' element={<Skills />} />
         <Route path='/portfolio' element={<Portfolio openProject={openProject}/>} />
-        <Route path='/project' element={<ProjectPage project={projects[activeProject]} />} />
+        <Route path='/project' element={<ProjectPage project={projects[activeProject]} toggleScroll={toggleScroll}/>} />
         <Route path='/contact' element={<Contact />} />
     </Routes>
 }

@@ -9,12 +9,13 @@ function App() {
         const savedActiveProjectId = localStorage.getItem('activeProjectId');
         return savedActiveProjectId !== null ? parseInt(savedActiveProjectId) : 0;
     });
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrollDisabled, setIsScrollDisabled] = useState(false);
 
 
 
-    function toggleMenu() {
-        setIsMenuOpen(!isMenuOpen)
+
+    function toggleScroll() {
+        setIsScrollDisabled(!isScrollDisabled)
     }
 
     function openProject(projectId: number) {
@@ -22,17 +23,17 @@ function App() {
     }
 
   return (
-    <Container $isMenuOpen={isMenuOpen}>
+    <Container $isScrollDisabled={isScrollDisabled}>
         <BrowserRouter>
-            <Navigation isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
-            <Routes activeProject={activeProjectId} openProject={openProject}/>
+            <Navigation toggleScroll={toggleScroll}/>
+            <Routes activeProject={activeProjectId} openProject={openProject} toggleScroll={toggleScroll}/>
         </BrowserRouter>
     </Container>
   )
 }
 
 
-const Container = styled.div<{ $isMenuOpen?: boolean; }>`
+const Container = styled.div<{ $isScrollDisabled?: boolean; }>`
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
@@ -40,7 +41,7 @@ const Container = styled.div<{ $isMenuOpen?: boolean; }>`
     height: 100vh;
     background: #222;
     
-    overflow: ${props => props.$isMenuOpen ? 'hidden' : ''};
+    overflow: ${props => props.$isScrollDisabled ? 'hidden' : ''};
 `
 
 export default App

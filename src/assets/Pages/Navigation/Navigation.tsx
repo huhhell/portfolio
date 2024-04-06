@@ -11,16 +11,22 @@ export interface MenuItemInterface {
 }
 
 interface Props {
-    isMenuOpen: boolean,
-    toggleMenu: () => void
+    toggleScroll: () => void
 }
 
-export default function Navigation({isMenuOpen, toggleMenu}: Props) {
+export default function Navigation({toggleScroll}: Props) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [activePageId, setActivePageId] = useState(() => {
         const savedActivePageId = localStorage.getItem('activePageId');
         return savedActivePageId !== null ? parseInt(savedActivePageId) : 0;
     });
+
+    function toggleMenu() {
+        setIsMenuOpen(!isMenuOpen);
+        toggleScroll();
+    }
+
 
     function changeActivePage(id: number) {
         setActivePageId(id)
