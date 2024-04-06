@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Project from "../../data/projects.ts";
+import Project from "../../data/projects.tsx";
 import {Link} from "react-router-dom";
 
 

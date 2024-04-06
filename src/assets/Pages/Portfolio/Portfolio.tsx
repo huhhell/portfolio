@@ -2,7 +2,7 @@ import {useState} from "react";
 import ProjectsListCategories from "../../components/ProjectsListCategories/ProjectsListCategories.tsx";
 import styled from "styled-components";
 import ProjectsList from "../../components/ProjectsList/ProjectsList.tsx";
-import Project, {projects} from "../../data/projects.ts";
+import Project, {projects} from "../../data/projects.tsx";
 
 
 interface Props {

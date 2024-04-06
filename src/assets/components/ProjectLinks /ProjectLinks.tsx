@@ -4,7 +4,7 @@ import notionImg from "../../img/links/notion.svg";
 import figmaImg from '../../img/links/figma.svg';
 import styled from "styled-components";
 import {Tech} from "../../data/tech.ts";
-import {ProjectLink} from "../../data/projects.ts";
+import {ProjectLink} from "../../data/projects.tsx";
 
 
 interface Props {
