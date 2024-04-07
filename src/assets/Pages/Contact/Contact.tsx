@@ -6,11 +6,12 @@ import hhImg from '../../img/contact/hh.svg'
 import locationImg from '../../img/contact/location.svg'
 import githubImg from '../../img/contact/github.svg'
 import cvImg from '../../img/contact/cv.svg'
+import avatarImg from '../../img/main/avatar.jpg'
 
 export default function Contact() {
     return <Container>
         <AvatarCnt>
-            <AvatarImg />
+            <AvatarImg src={avatarImg}/>
         </AvatarCnt>
 
         <Info>
@@ -80,6 +81,7 @@ const AvatarCnt = styled.div`
     border-radius: 50%;
     border: 10px solid #444;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.80);
+    overflow: hidden;
 
     @media (max-width: 900px) {
         flex: 0 0 auto;
@@ -97,7 +99,9 @@ const AvatarCnt = styled.div`
 `
 
 const AvatarImg = styled.img`
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
 
 const Info = styled.div`

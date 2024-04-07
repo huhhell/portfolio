@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import avatarImg from '../../img/main/avatar.jpg';
 
 export default function Home() {
 
     return <HomeCnt>
         <AvatarCnt>
-            <AvatarImg/>
+            <AvatarImg src={avatarImg}/>
         </AvatarCnt>
         <Info>
             <Subtitle>Frontend Developer</Subtitle>
@@ -53,6 +54,7 @@ const AvatarCnt = styled.div`
     border-radius: 50%;
     border: 10px solid #444;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.80);
+    overflow: hidden;
     
     @media (max-width: 900px) {
         flex: 0 0 auto;
@@ -70,7 +72,9 @@ const AvatarCnt = styled.div`
 `
 
 const AvatarImg = styled.img`
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
 
 const Info = styled.div`
@@ -117,7 +121,7 @@ const Text = styled.p`
     }
     
     @media (max-width: 600px) {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 `
