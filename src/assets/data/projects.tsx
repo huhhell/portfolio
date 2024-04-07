@@ -48,7 +48,7 @@ export const projects: Project[] = [
         img: Project04Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/dashboard', id: 0}, {name: 'Website', link: 'https://dashboard-five-blue-84.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/Dashboard-a8527b923d474754af40b8c0fdcfb927?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1060952013207459371/vision-ui-dashboard-react-mui-dashboard-free-version', id: 4}],
         category: 'React',
-        id: 3
+        id: 0
     },
     {
         name: 'Bouquets E-Commerce',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
         img: Project01Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/flowerWeb', id: 0}, {name: 'Website', link: 'https://flower-web-sooty.vercel.app/products', id: 2}, {name: 'Notion', link: 'https://www.notion.so/Bouquets-E-Commerce-dbe27757e8c24f2f8411ef505a01baad?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1259217583079978202/ecommerce-flower-delivery-website-ui-ux-ui-kit-template', id: 4}],
         category: 'React',
-        id: 0
+        id: 1
     },
     {
         name: 'Curious Kids Website',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
         img: Project02Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/educationLanding', id: 0}, {name: 'Website', link: 'https://education-landing-five.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/Curious-Kids-Website-6f6a97cd43334c1f915bea183c0e1908?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/file/mKjceh1ZnhPYSrYpovrQ7A/Edutech-Landing-Page-(Community)?type=design&node-id=0%3A1&mode=design&t=QttaiDl5LaNa5rVK-1', id: 4}],
         category: 'HTML / CSS',
-        id: 1
+        id: 2
     },
     {
         name: 'Hydra Landing',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         img: Project05Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/hydraLanding', id: 0}, {name: 'Website', link: 'https://hydra-landing-blond.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/HydraLanding-00afb6e077614f748b80fe356e105e96?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1196146735025729739/hydra-landing-page', id: 4}],
         category: 'HTML / CSS',
-        id: 4
+        id: 3
     },
     {
         name: 'Todo',
@@ -94,7 +94,7 @@ export const projects: Project[] = [
         img: Project06Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/TodoApp', id: 0}, {name: 'Website', link: 'https://todo-app-hazel-xi.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/todoAppReact-279d917e7f3a4587a568b3e7211d1ed9?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1133173477581507595/todo-app', id: 4}],
         category: 'Components',
-        id: 5
+        id: 4
     },
     {
         name: 'Credit Card Form',
@@ -104,7 +104,7 @@ export const projects: Project[] = [
         img: Project03Images,
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/creditCardForm', id: 0}, {name: 'Notion', link: 'https://www.notion.so/credit-card-form-6e1325a527d14c0f94b0a96e700ad6a7?pvs=4', id: 3}],
         category: 'Components',
-        id: 2
+        id: 5
     },
 ]
 
