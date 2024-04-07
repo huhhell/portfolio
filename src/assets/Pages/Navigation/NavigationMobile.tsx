@@ -39,7 +39,7 @@ export default function NavigationMobile({activePageId, isMenuOpen, menuItems, h
                 <SocialsItem href='https://github.com/huhhell' target='_blank'>
                     <SocialsImg src={gitHubImg} alt='github'/>
                 </SocialsItem>
-                <SocialsItem href='mailto:vikalited@mail.ru' target='_blank'>
+                <SocialsItem href='mailto:huhhell@mail.ru' target='_blank'>
                     <SocialsImg src={mailImg} alt='email'/>
                 </SocialsItem>
                 <SocialsItem href='https://t.me/huhhell' target='_blank'>

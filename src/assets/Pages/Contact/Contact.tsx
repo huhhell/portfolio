@@ -22,7 +22,7 @@ export default function Contact() {
                 </ItemLink>
             </Item>
             <Item>
-                <ItemLink href='mailto:vikalited@mail.ru' target='_blank'>
+                <ItemLink href='mailto:huhhell@mail.ru' target='_blank'>
                     <ItemIcon src={mailImg}/>
                     <ItemName>vikalited@mail.ru</ItemName>
                 </ItemLink>
