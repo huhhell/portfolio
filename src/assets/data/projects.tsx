@@ -39,9 +39,17 @@ export default interface Project {
     id: number
 }
 
-
-
 export const projects: Project[] = [
+    {
+        name: 'Dashboard',
+        tech: [reactT, javaScript],
+        descriptionShort: 'SPA с компонентами для повышения личной продуктивности',
+        descriptionLong: 'Небольшое SPA созданное для того чтобы собрать компоненты, которые писала на протяжении своего обучения, воедино. На данный момент состоит из Помодоро таймера, который можно настроить под себя, менеджера задач и трекера привычек. Их функционал можно посмотреть в галерее. Так же присутсвуют блоки с текущей датой и временем. ',
+        img: Project04Images,
+        links: [{name: 'GitHub', link: 'https://github.com/huhhell/dashboard', id: 0}, {name: 'Website', link: 'https://dashboard-five-blue-84.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/Dashboard-a8527b923d474754af40b8c0fdcfb927?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1060952013207459371/vision-ui-dashboard-react-mui-dashboard-free-version', id: 4}],
+        category: 'React',
+        id: 3
+    },
     {
         name: 'Bouquets E-Commerce',
         tech: [reactT, typeScript, SCSS, reactRouter, materialUI],
@@ -69,26 +77,6 @@ export const projects: Project[] = [
         id: 1
     },
     {
-        name: 'Credit Card Form',
-        tech: [HTML, SCSS, javaScript],
-        descriptionShort: 'Форма для заполнения банковской карты',
-        descriptionLong: 'Форма для заполнения данных банковской карты. Сделана в качестве практики анимаций и использования JavaScript в браузере. Из функционала были реализованы: анимация при вводе номера карты, заглушка цифр посередине, работа формы а так же возможность ее отправки на сервер. Дизайн был создан мною, опираясь на похожие примеры. ',
-        img: Project03Images,
-        links: [{name: 'GitHub', link: 'https://github.com/huhhell/creditCardForm', id: 0}, {name: 'Notion', link: 'https://www.notion.so/credit-card-form-6e1325a527d14c0f94b0a96e700ad6a7?pvs=4', id: 3}],
-        category: 'Components',
-        id: 2
-    },
-    {
-        name: 'Dashboard',
-        tech: [reactT, javaScript],
-        descriptionShort: 'SPA с компонентами для повышения личной продуктивности',
-        descriptionLong: 'Небольшое SPA созданное для того чтобы собрать компоненты, которые писала на протяжении своего обучения, воедино. На данный момент состоит из Помодоро таймера, который можно настроить под себя, менеджера задач и трекера привычек. Их функционал можно посмотреть в галерее. Так же присутсвуют блоки с текущей датой и временем. ',
-        img: Project04Images,
-        links: [{name: 'GitHub', link: 'https://github.com/huhhell/dashboard', id: 0}, {name: 'Website', link: 'https://dashboard-five-blue-84.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/Dashboard-a8527b923d474754af40b8c0fdcfb927?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1060952013207459371/vision-ui-dashboard-react-mui-dashboard-free-version', id: 4}],
-        category: 'React',
-        id: 3
-    },
-    {
         name: 'Hydra Landing',
         tech: [HTML, CSS, javaScript],
         descriptionShort: 'Адаптивный лэндинг для компании которая занимается vr разработкой',
@@ -107,6 +95,16 @@ export const projects: Project[] = [
         links: [{name: 'GitHub', link: 'https://github.com/huhhell/TodoApp', id: 0}, {name: 'Website', link: 'https://todo-app-hazel-xi.vercel.app/', id: 2}, {name: 'Notion', link: 'https://www.notion.so/todoAppReact-279d917e7f3a4587a568b3e7211d1ed9?pvs=4', id: 3}, {name: 'Figma', link: 'https://www.figma.com/community/file/1133173477581507595/todo-app', id: 4}],
         category: 'Components',
         id: 5
+    },
+    {
+        name: 'Credit Card Form',
+        tech: [HTML, SCSS, javaScript],
+        descriptionShort: 'Форма для заполнения банковской карты',
+        descriptionLong: 'Форма для заполнения данных банковской карты. Сделана в качестве практики анимаций и использования JavaScript в браузере. Из функционала были реализованы: анимация при вводе номера карты, заглушка цифр посередине, работа формы а так же возможность ее отправки на сервер. Дизайн был создан мною, опираясь на похожие примеры. ',
+        img: Project03Images,
+        links: [{name: 'GitHub', link: 'https://github.com/huhhell/creditCardForm', id: 0}, {name: 'Notion', link: 'https://www.notion.so/credit-card-form-6e1325a527d14c0f94b0a96e700ad6a7?pvs=4', id: 3}],
+        category: 'Components',
+        id: 2
     },
 ]
 
