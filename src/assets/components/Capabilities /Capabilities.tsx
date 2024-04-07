@@ -105,7 +105,7 @@ const CapabilitiesText = styled.p`
     }
 `
 
-const Highlight = styled.div`
+const Highlight = styled.span`
     display: inline-block;
     padding: 2px;
     background: rgba(255, 255, 0, 0.1);

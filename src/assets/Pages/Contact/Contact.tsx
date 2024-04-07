@@ -39,7 +39,7 @@ export default function Contact() {
                 </ItemLink>
             </Item>
             <Item>
-                <ItemLink href='' target='_blank'>
+                <ItemLink href='https://novosibirsk.hh.ru/resume/3377fc2fff0d0c33aa0039ed1f6d6a66743358' target='_blank'>
                     <ItemIcon src={hhImg}/>
                     <ItemName>Head Hunter</ItemName>
                 </ItemLink>
@@ -51,7 +51,7 @@ export default function Contact() {
                 </ItemLink>
             </Item>
             <Item>
-                <ItemLink target='_blank'>
+                <ItemLink href='https://indigo-pea-cb9.notion.site/CV-dfb091b3dbd94135ada284ba9ec93d49?pvs=25' target='_blank'>
                     <ItemIcon src={cvImg}/>
                     <ItemName>CV</ItemName>
                 </ItemLink>
