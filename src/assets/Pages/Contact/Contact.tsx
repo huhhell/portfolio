@@ -24,7 +24,7 @@ export default function Contact() {
             <Item>
                 <ItemLink href='mailto:huhhell@mail.ru' target='_blank'>
                     <ItemIcon src={mailImg}/>
-                    <ItemName>vikalited@mail.ru</ItemName>
+                    <ItemName>huhhell@mail.ru</ItemName>
                 </ItemLink>
             </Item>
             <Item>
